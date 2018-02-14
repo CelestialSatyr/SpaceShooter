@@ -19,7 +19,7 @@ public class enemyScript : MonoBehaviour
 	
 	void Update ()
     {
-        Vector2 localPosition = playerPos.transform.position - transform.position;
-        transform.Translate(localPosition.normalized.x * Time.deltaTime * Speed, localPosition.normalized.y * Time.deltaTime * Speed);
+        Vector3 localPosition = playerPos.transform.position - transform.position;
+        transform.Translate(localPosition.normalized.x * Time.deltaTime * Speed, localPosition.normalized.y * Time.deltaTime * Speed, localPosition.normalized.z * Time.deltaTime * Speed);
     }
 }
